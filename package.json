@@ -1,0 +1,53 @@
+{
+  "name": "@coco-platform/webpack-plugin-inline",
+  "version": "0.2.0",
+  "description": "A lite project to develop webpack plugin.",
+  "main": "lib/index.js",
+  "scripts": {
+    "precommit": "pretty-quick --staged",
+    "prepush": "npm test",
+    "test": "jest --config jest.config.js --coverage",
+    "test:watch": "jest --config jest.config.js --watch"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/coco-platform/webpack-plugin-inline.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin"
+  ],
+  "author": "yang.yuncai <383235388@qq.com>",
+  "contributors": [
+    {
+      "name": "yang.yuncai",
+      "email": "yangyuncai@outlook.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coco-platform/webpack-plugin-inline/issues"
+  },
+  "homepage": "https://github.com/coco-platform/webpack-plugin-inline#README",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "glob": "^7.1.2",
+    "handlebars": "^4.0.11",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
+    "jest": "^23.1.0",
+    "memory-fs": "^0.4.1",
+    "prettier": "^1.13.4",
+    "pretty-quick": "^1.6.0",
+    "webpack": "^4.10.2",
+    "yamljs": "^0.3.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1"
+  }
+}
