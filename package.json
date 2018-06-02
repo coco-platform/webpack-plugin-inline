@@ -1,8 +1,11 @@
 {
   "name": "@coco-platform/webpack-plugin-inline",
   "version": "0.2.0",
-  "description": "A lite project to develop webpack plugin.",
+  "description": "inline contents outside webpack compile process.",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">8.6.0"
+  },
   "scripts": {
     "precommit": "pretty-quick --staged",
     "prepush": "npm test",
@@ -20,8 +23,12 @@
     "webpack",
     "plugin"
   ],
-  "author": "yang.yuncai <383235388@qq.com>",
+  "author": "huang.jian <hjj491229492@hotmail.com>",
   "contributors": [
+    {
+      "name": "huang.jian",
+      "email": "hjj491229492@hotmail.com"
+    },
     {
       "name": "yang.yuncai",
       "email": "yangyuncai@outlook.com"

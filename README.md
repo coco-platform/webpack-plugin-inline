@@ -5,6 +5,8 @@
 ![Package Dependency](https://david-dm.org/coco-platform/webpack-plugin-inline.svg?style=flat)
 ![Package DevDependency](https://david-dm.org/coco-platform/webpack-plugin-inline/dev-status.svg?style=flat)
 
+Inline contents outside webpack compile process.
+
 ## Usage
 
 ```shell
@@ -16,9 +18,9 @@ yarn add @coco-platform/webpack-plugin-inline --dev;
 
 ## Options
 
-### options.verbose
+### options.files
 
-Optional, default false. whether output hints resource into stdout.
+Optional, files need to inline, relative to `process.cwd()`
 
 ## Example
 
@@ -47,7 +49,10 @@ const configuration = {
     ]),
     Reflect.construct(PlaceholderPlugin, [
       {
-        verbose: true,
+        files: [
+          '__tests__/__fixture__/index.js',
+          '__tests__/__fixture__/index.css',
+        ],
       },
     ]),
   ],
@@ -57,13 +62,27 @@ const configuration = {
 Finally output:
 
 ```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Webpack Plugin</title>``
+  <title>Webpack Plugin</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script>
+    /* eslint-env browser */
+    document.addEventListener('load', () => {
+    });
+  </script>
 </head>
 <body>
-  <script type="text/javascript" src="/main.js"></script></body>
+  <script type="text/javascript" src="/main.js"></script>
+</body>
 </html>
 ```
 

@@ -10,7 +10,7 @@ const MemoryFS = require('memory-fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Internal
-const Plugin = require('../lib');
+const InlinePlugin = require('../lib');
 
 // Scope
 const mfs = Reflect.construct(MemoryFS, []);
@@ -34,9 +34,12 @@ const configuration = {
         inject: 'body',
       },
     ]),
-    Reflect.construct(Plugin, [
+    Reflect.construct(InlinePlugin, [
       {
-        verbose: true,
+        files: [
+          '__tests__/__fixture__/index.js',
+          '__tests__/__fixture__/index.css',
+        ],
       },
     ]),
   ],
