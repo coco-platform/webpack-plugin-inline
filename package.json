@@ -41,7 +41,7 @@
   "homepage": "https://github.com/coco-platform/webpack-plugin-inline#README",
   "devDependencies": {
     "eslint": "^6.0.0",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.12.0",
     "glob": "^7.1.2",
     "handlebars": "^4.0.11",
