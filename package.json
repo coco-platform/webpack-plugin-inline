@@ -1,6 +1,6 @@
 {
   "name": "@coco-platform/webpack-plugin-inline",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "inline contents outside webpack compile process.",
   "main": "lib/index.js",
   "engines": {
