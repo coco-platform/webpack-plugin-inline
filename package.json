@@ -7,7 +7,6 @@
     "node": ">8.6.0"
   },
   "scripts": {
-    "prepush": "yarn test",
     "pretest": "yarn add webpack --peer",
     "test": "jest --config jest.config.js --coverage",
     "test:watch": "jest --config jest.config.js --watch"
@@ -62,7 +61,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "npm test"
+      "pre-push": "yarn test"
     }
   }
 }
