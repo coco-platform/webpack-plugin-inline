@@ -39,8 +39,12 @@
   },
   "homepage": "https://github.com/coco-platform/webpack-plugin-inline#README",
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.2",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.0.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.1.0",
@@ -61,7 +65,13 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn test"
+      "pre-push": "yarn test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
     }
   }
 }
