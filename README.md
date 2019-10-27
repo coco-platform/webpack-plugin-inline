@@ -5,7 +5,7 @@
 ![Package Dependency](https://david-dm.org/coco-platform/webpack-plugin-inline.svg?style=flat)
 ![Package DevDependency](https://david-dm.org/coco-platform/webpack-plugin-inline/dev-status.svg?style=flat)
 
-Inline contents outside webpack compile process.
+Inline static scripts, stylesheets outside webpack compile process.
 
 ## Usage
 
@@ -20,7 +20,7 @@ yarn add @coco-platform/webpack-plugin-inline --dev;
 
 ### options.files
 
-Optional, files need to inline, relative to `process.cwd()`
+required, declare files need to inline, absolute path or relative to `process.cwd()`
 
 ## Example
 
@@ -49,25 +49,24 @@ Finally output:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Webpack Plugin</title>
-  <style>
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-  <script>
-    /* eslint-env browser */
-    document.addEventListener('load', () => {
-    });
-  </script>
-</head>
-<body>
-  <script type="text/javascript" src="/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Webpack Plugin</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script>
+      /* eslint-env browser */
+      document.addEventListener('load', () => {});
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript" src="/main.js"></script>
+  </body>
 </html>
 ```
 
